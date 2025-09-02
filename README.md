@@ -1,46 +1,161 @@
-# Getting Started with Create React App
+﻿# Campus Resources Management System (CRMS)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A comprehensive web application for managing campus resources including rooms, labs, equipment, and vehicles with role-based access control, booking system, and real-time notifications.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### 👥 User Account & Role Management
+- Firebase Authentication with email/password
+- Role-based access: Admin, Lecturer, Student
+- User profile management with profile pictures
+- Department-based access control
+- Password encryption and security best practices
 
-### `npm start`
+### 📅 Resource Booking System
+- Real-time booking interface with calendar integration
+- Multi-resource booking support
+- Recurring bookings (daily, weekly, monthly)
+- Booking confirmation flow with email notifications
+- Auto-conflict detection and resolution
+- Booking modification and cancellation
+- Approval workflow with admin notifications
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🛠️ Resource Management
+- Complete resource inventory (Add/Edit/Delete)
+- Resource categorization: Rooms, Labs, Equipment, Vehicles
+- Availability status tracking
+- Maintenance scheduling
+- QR code integration for asset scanning
+- Location and capacity management
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 📧 Communication & Notifications
+- Email and SMS notifications
+- In-system notification center
+- Booking confirmations and reminders
+- Admin announcements
+- Feedback and issue reporting system
 
-### `npm test`
+### 📊 Reports & Analytics
+- Booking history reports
+- Resource utilization dashboard
+- Conflict reports
+- Maintenance logs
+- User activity analytics
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔐 Security & Logs
+- Complete audit trail
+- User access logs
+- Failed login alerts
+- Data backup and recovery
+- Role-based permissions
 
-### `npm run build`
+### 🌐 Integration Features
+- FullCalendar integration for booking calendar
+- Real-time updates
+- Mobile-responsive design
+- QR code scanning
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React 18 with TypeScript
+- **Styling**: TailwindCSS with custom components
+- **Backend**: Firebase (Authentication, Firestore, Functions, Storage)
+- **Calendar**: FullCalendar.js
+- **Notifications**: Firebase Cloud Messaging
+- **Icons**: Lucide React, Heroicons
+- **Forms**: React Hook Form with Yup validation
+- **Routing**: React Router DOM
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+1. Clone the repository
+2. Install dependencies: 
+pm install
+3. Set up Firebase project and update config
+4. Run the application: 
+pm start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`
+src/
+├── components/          # Reusable UI components
+├── contexts/           # React contexts (Auth, etc.)
+├── firebase/           # Firebase configuration
+├── hooks/              # Custom React hooks
+├── pages/              # Application pages
+├── types/              # TypeScript interfaces
+├── utils/              # Utility functions
+└── App.tsx             # Main application component
+`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Firebase Setup
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Create a new Firebase project
+2. Enable Authentication, Firestore, Storage, and Functions
+3. Update the configuration in src/firebase/config.ts
+4. Set up Firestore security rules
+5. Configure email templates for notifications
 
-## Learn More
+## Features Implementation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Authentication System
+- Secure login/logout with Firebase Auth
+- Role-based routing and access control
+- User profile management
+- Password reset functionality
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Resource Management
+- CRUD operations for all resource types
+- Image upload for resources
+- QR code generation and scanning
+- Maintenance scheduling
+
+### Booking System
+- Calendar-based booking interface
+- Real-time availability checking
+- Conflict detection and resolution
+- Recurring booking support
+- Approval workflow
+
+### Admin Dashboard
+- Resource overview and management
+- User management
+- Booking approvals
+- System analytics
+- Maintenance scheduling
+
+### Notification System
+- Real-time notifications
+- Email integration
+- SMS notifications (optional)
+- In-app notification center
+
+## Security Features
+
+- Role-based access control
+- Input validation and sanitization
+- Secure file uploads
+- Audit logging
+- Session management
+- CSRF protection
+
+## Deployment
+
+The application is ready for deployment on:
+- Firebase Hosting
+- Vercel
+- Netlify
+- Any static hosting service
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
